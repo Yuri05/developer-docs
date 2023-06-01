@@ -21,6 +21,7 @@ This coding standards will outline the more important aspects of the aforementio
 
 - Use UTF-8 text encoding (Ref: <https://yihui.org/en/2018/11/biggest-regret-knitr/>)
 
+
 <img src="figures/utf8.jfif" alt="drawing" width="300"/>
 
 - Use `{tinytex}` for `LaTeX` compilation (Ref: <https://yihui.org/tinytex/pain/>)
@@ -42,6 +43,8 @@ Use meaningful and understandable names. Code should read as a story and only so
 ## Files
 
 File names containing both source code (`/R`) and tests (`/tests`) should follow the kebab-case naming convention and should have `.R` extension.
+
+Do not use special characters (e.g. “µ”, “ß”, …) or blanks in the file names
 
 ```r
 # bad
@@ -178,7 +181,7 @@ If a class has a private method, its name should start with `.` to highlight thi
 
 Use the `styler` addin for RStudio. It will style the files for you. For more, see [here](https://style.tidyverse.org/syntax.html#spacing)
 
-## Global Variables
+## Global Variables and Constants
 
 - Except for program constants or truly global states, never use global variables. If a global object is required, this should be absolutely discussed with the team.
 
@@ -280,6 +283,19 @@ There is a line between text and chunk.
 # and the next section is separated by line as well
 ````
 
+# Code complexity
+R provides some quality checking tools, which can also investigate the complexity of code.
+E.g. the R package cyclocomp allows the calculation of cyclomatic complexity of a function or a package, s. https://en.wikipedia.org/wiki/Cyclomatic_complexity )
+* `cyclocomp::cyclocomp(<function_name>)` OR 
+* `cyclocomp::cyclocomp_package(<package_name>)` OR
+* `cyclocomp::cyclocomp_q(<R_expression>)`
+Example:
+
+![](figures/Cyclocomp_Example.png)
+
+General advice is: **cyclomatic complexity of a function should not exceed the value of 15**
+https://en.wikipedia.org/wiki/Cyclomatic_complexity#Limiting_complexity_during_development
+
 # See also
- 
+
 A more comprehensive list of tools helpful for package development can be found in this [resource](https://github.com/IndrajeetPatil/awesome-r-pkgtools/blob/master/README.md).
