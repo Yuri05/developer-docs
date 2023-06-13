@@ -3,5 +3,5 @@
 * [About this Documentation](README.md)
 * [CODING\_STANDARDS](CODING\_STANDARDS.md)
 * [Ways to Contribute](CONTRIBUTING.md)
-* [Developer Getting Started](GETTING\_STARTED.md)
-* [General Resources](general-resources.md)
+* [Setting up the developer environment](GETTING\_STARTED.md)
+* [Getting started](general-resources.md)
