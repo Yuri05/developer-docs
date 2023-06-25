@@ -1,2 +1,0 @@
-# Algorithm for Individual Creation
-
