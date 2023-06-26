@@ -5,6 +5,8 @@
 * [Setting up the developer environment](GETTING\_STARTED.md)
 * [Algorithm for Individual Creation](algorithm-for-individual-creation.md)
 * [Finding Memory Leaks](FINDING-MEMORY-LEAKS.md)
+* [Setup OSPSuite-R on CentOS7] (Setup-ospsuite-R-on-CentOS7.md)
+* [Setup OSPSuite-R on Ubuntu] (Setup-ospsuite-R-on-Ubuntu.md)
 
 ## Getting started
 
