@@ -1,13 +1,20 @@
- Table of contents
+# Table of contents
 
 * [About this Documentation](README.md)
-* [CODING\_STANDARDS](CODING\_STANDARDS.md)
-* [Setting up the developer environment](GETTING\_STARTED.md)
-* [Algorithm for Individual Creation](algorithm-for-individual-creation.md)
-* [Finding Memory Leaks](FINDING-MEMORY-LEAKS.md)
-* [Setup OSPSuite-R on CentOS7] (Setup-ospsuite-R-on-CentOS7.md)
-* [Setup OSPSuite-R on Ubuntu] (Setup-ospsuite-R-on-Ubuntu.md)
 
 ## Getting started
 
 * [Initial Resources](getting-started/initial-resources.md)
+
+***
+
+* [CODING\_STANDARDS](CODING\_STANDARDS.md)
+* [Setting up the developer environment](GETTING\_STARTED.md)
+* [Algorithm for Individual Creation](algorithm-for-individual-creation.md)
+* [Finding Memory Leaks](FINDING-MEMORY-LEAKS.md)
+
+## OSPSuite-R Setup
+
+* [Setup OSPSuite-R on Windows](ospsuite-r-setup/setup-ospsuite-r-on-windows.md)
+* [\[Setup OSPSuite-R on CentOS7\] (Setup-ospsuite-R-on-CentOS7.md)](ospsuite-r-setup/setup-ospsuite-r-on-centos7-setup-ospsuite-r-on-centos7.md.md)
+* [\[Setup OSPSuite-R on Ubuntu\] (Setup-ospsuite-R-on-Ubuntu.md)](ospsuite-r-setup/setup-ospsuite-r-on-ubuntu-setup-ospsuite-r-on-ubuntu.md.md)
