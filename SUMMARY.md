@@ -8,11 +8,11 @@
 
 ***
 
-* [CODING\_STANDARDS](CODING\_STANDARDS.md)
+* [C# Coding Standards](CODING\_STANDARDS.md)
 * [Setting up the developer environment](GETTING\_STARTED.md)
 * [Algorithm for Individual Creation](algorithm-for-individual-creation.md)
 * [Finding Memory Leaks](FINDING-MEMORY-LEAKS.md)
-* [Git Workflow](GIT_WORKFLOW.md)
+* [Git Workflow](GIT\_WORKFLOW.md)
 
 ## OSPSuite-R Setup
 
