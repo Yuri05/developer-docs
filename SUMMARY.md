@@ -12,6 +12,7 @@
 * [Setting up the developer environment](GETTING\_STARTED.md)
 * [Algorithm for Individual Creation](algorithm-for-individual-creation.md)
 * [Finding Memory Leaks](FINDING-MEMORY-LEAKS.md)
+* [Git Workflow](GIT_WORKFLOW.md)
 
 ## OSPSuite-R Setup
 
