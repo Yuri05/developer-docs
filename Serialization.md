@@ -202,3 +202,69 @@ The observed data of a project is a very good example of this, since they are re
 
 In case the above functionalities do not cover your use case, you can also use `TypedSerialize(TObject objectToSerialize, TContext context)` and `TypedDeserialize(TObject objectToDeserialize, XElement outputToDeserialize, TContext context)` to be able to specify the actions that should happen before and after (de)serialization. This is the functionality used e.g. for the (de)serialization of the FormulaCache and its corresponding StringMap (as discussed in the xml structure section above). 
 
+A simple example for the use of these two functions in a class in Core is the [DisplayUnitMapXmlSerializer](https://github.com/Open-Systems-Pharmacology/OSPSuite.Core/blob/develop/src/OSPSuite.Core/Serialization/Xml/DisplayUnitsManagerXmlSerializer.cs). There we have a  `OSPSuite.Core.Domain.UnitSystem.Unit` as DisplayUnit member and we want to serialize the unit name as a string. We also serialize teh dimension. When we deserialize we want to get from the created `DisplayUnitMap` dimension the actual Unit and not just a string.
+
+```
+   public class DisplayUnitMapXmlSerializer : OSPSuiteXmlSerializer<DisplayUnitMap>
+   {
+      public override void PerformMapping()
+      {
+         Map(x => x.Dimension);
+      }
+
+      protected override void TypedDeserialize(DisplayUnitMap displayUnitMap, XElement element, SerializationContext serializationContext)
+      {
+         base.TypedDeserialize(displayUnitMap, element, serializationContext);
+         element.UpdateDisplayUnit(displayUnitMap);
+      }
+
+      protected override XElement TypedSerialize(DisplayUnitMap displayUnitMap, SerializationContext serializationContext)
+      {
+         var element = base.TypedSerialize(displayUnitMap, serializationContext);
+         return element.AddDisplayUnitFor(displayUnitMap);
+      }
+   }
+```
+
+For that we are also using the following extension methods on the xml element:
+
+```
+public static XElement AddDisplayUnitFor(this XElement element, IWithDisplayUnit withDisplayUnit)
+{
+   return AddDisplayUnit(element, withDisplayUnit.DisplayUnit);
+}
+
+public static XElement AddDisplayUnit(this XElement element, Unit unit)
+{
+   if (unit == null || string.IsNullOrEmpty(unit.Name))
+      return element;
+
+   element.AddAttribute(Constants.Serialization.Attribute.DISPLAY_UNIT, unit.Name);
+   return element;
+}
+
+.
+.
+.
+
+public static void UpdateDisplayUnit(this XElement element, IWithDisplayUnit withDisplayUnit)
+{
+   withDisplayUnit.DisplayUnit = GetDisplayUnit(element, withDisplayUnit);
+}
+
+public static Unit GetDisplayUnit(this XElement element, IWithDimension withDimension)
+{
+   return GetDisplayUnit(element, withDimension.Dimension);
+}
+
+public static Unit GetDisplayUnit(this XElement element, IDimension dimension)
+{
+   if (dimension == null)
+      return null;
+
+   var displayUnit = element.GetAttribute(Constants.Serialization.Attribute.DISPLAY_UNIT);
+   return dimension.UnitOrDefault(displayUnit);
+}
+
+```
+
