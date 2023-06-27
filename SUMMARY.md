@@ -6,13 +6,11 @@
 
 * [Initial Resources](getting-started/initial-resources.md)
 
-***
+## Setup
 
-* [C# Coding Standards](CODING\_STANDARDS.md)
-* [Setting up the developer environment for C#](GETTING\_STARTED.md)
-* [Algorithm for Individual Creation](algorithm-for-individual-creation.md)
-* [Finding Memory Leaks](FINDING-MEMORY-LEAKS.md)
-* [Git Workflow](GIT\_WORKFLOW.md)
+* [Git Workflow](setup/git\_workflow.md)
+* [C# Coding Standards](setup/coding\_standards.md)
+* [Setting up the developer environment for C#](setup/getting\_started.md)
 
 ## OSPSuite-R Setup
 
@@ -27,3 +25,11 @@
 * [Commands](c-code-specifics/commands.md)
 * [Debugging](c-code-specifics/debugging.md)
 * [Data Binding](c-code-specifics/data-binding.md)
+
+## Sim Model
+
+* [Finding Memory Leaks](sim-model/finding-memory-leaks.md)
+
+## Algorithms
+
+* [Algorithm for Individual Creation](algorithms/algorithm-for-individual-creation.md)
