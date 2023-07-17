@@ -22,10 +22,6 @@ Then go to "ROOT\PK-Sim\src\PKSim\bin\Debug\net472" and start the PKSim.exe. Whe
 
 For MoBi you have to go to "ROOT\MoBi\src\MoBi\bin\Debug\net472", start "MoBi.exe" and accordingly attach the debugger from Core to the MoBi process.
 
-# Starting PK-Sim or MoBi with the debugger
-
-When it is necessary to debug one of the solutions from OSPSuite.Core right from the start of the application, you need to start them from the command line with the -debug argument. Alternatively of course you can create a shortcut with the argument set in its properties. Then the application will start but wait for you to attach the debugger to the process, which you can do from Core as usual.
-
 # Debugging from R script
 
 You can also debug the OSPSuite.Core code from an R script. To do that you need to
