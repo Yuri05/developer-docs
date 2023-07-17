@@ -4,15 +4,15 @@
 
 In order to be able to test some of the functionalities of the OSPSuite that reside in [OSPSuite.Core](https://github.com/Open-Systems-Pharmacology/OSPSuite.Core) there has been created in Core the OSPSuite.Starter project. You simply have to set it up as a startup project:
 
-![Right click on OSPSuite.Starter project and select "Setup as startup project".](../assets/images/setting as startup project.jpg)
+![Right click on OSPSuite.Starter project and select "Setup as startup project".](../assets/images/setting as startup project.png)
 
 Then you can start with the debugger in Visual Studio:
 
-![Start debugging.](../assets/images/starting with debugger.jpg)
+![Start debugging.](../assets/images/starting with debugger.png)
 
 As you can see in the window that appears you can test various Core functionalities both as a user and through breakpoints in code.
 
-![The starter view.](../assets/images/starter view.jpg)
+![The starter view.](../assets/images/starter view.png)
 
 ## Debugging between solutions
 
@@ -31,10 +31,10 @@ You can also debug the OSPSuite.Core code from an R script. To do that you need 
 2) Copy the created dlls and associated .pdb files from "OSPSuite.Core\src\OSPSuite.R\bin\Debug\netstandard2.0\" to the your OSPSuite.R installation directory and specifically in the "OSPSuite-R\inst\lib\" folder.
 
 3) Start the OSPSuite.R project in R 
-![Ospsuite.R RStudio project file.](../assets/images/![The starter view.](../assets/images/starter view.jpg)
+![Ospsuite.R RStudio project file.](../assets/images/![The starter view.](../assets/images/starter view.png)
 
 4) Attach the Visual Studio debugger from the OSPSuite.Core solution to the RSession. Make sure to attach to rsession NOT to rstudio.exe.
-![Attach to rsession.](../assets/images/![The starter view.](../assets/images/rsession.jpg)
+![Attach to rsession.](../assets/images/![The starter view.](../assets/images/rsession.png)
 
 5) Load using devtools and load_all to make sure the symbol files also get loaded:
 
