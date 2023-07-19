@@ -1,12 +1,12 @@
 # Unit and Integration Testing
 
-# Introduction
 
+# Introduction
 
 Unit testing is an integral part of our software practices and we to keep the code that we write well covered by tests. Currently Pull Requests are only being accepted if they contain at least one unit test ( with the logical exceptions e.g. a PR containing only package updates ) and the code can be considered well covered by unit tests. We try when possible to implement a Test-Driven-Development (TDD) approach, and specifically for fixing bugs it is strongly suggested to first write a failing test according to the error description and then fix the issue, to ensure the correct and permanent elimination of the bug.
 
-
 For the C# solutions to write unit tests we are using [NUnit](https://nunit.org/) in combination with [FakeItEasy](https://fakeiteasy.github.io/) to mock object and intercept calls and our own [BDDHelper](https://github.com/Open-Systems-Pharmacology/OSPSuite.BDDHelper) comprising of extensions methods to write and structure unit tests in a Behavior Driven Development manner.
+
 
 # Test Outline
 
@@ -26,7 +26,6 @@ Please follow this naming convention for the abstract unit test classes of calli
 Usually in this abstract class we would define the Context() override and also some protected members that would be common to all the test cases (even if their value would not stay constant for every test case). 
 
 The `Context()` is the setup of the test, where the environment and necessary objects are created. Functionalities that will be used overall in the test class should be defined and created here. As part of this `Context()` we could assign the `sut` (System Under Test) - alternatively this could be part of the `Because()` that we will see in the next segment, specifically if our test case concerns the instantiation of the object. 
-
 
 Apart from this `Context()` that would then be called (and if necessary also overriden) for every test case which inherits from this abstract class, we can also create a GlobalContext() override, where we instantiate resource-heavy objects that are used overall in the test class, since objects in the GlobalContext() are only instantiated once per test class.
 
@@ -66,7 +65,6 @@ public class When_changing_a_NewClass_property_value : concern_for_NewClass
 ```
 
 Please note the convention of naming the unit test classes using complete sentences in lowercase separated with underscores('_') instead of whitespaces. The BDDHelper then replaces the underscores with whitespaces for the test reports. The same naming logic applies to the Observations. Unit test classes usually ( but of course not necessarily ) start with "When_.." and Observations with "should_...". It is important that both the unit test class name as well as the observation fully and correctly describe the behaviour that gets tested and the expected outcome. The lenghth of the name is in this case of no big concern.
-
 
 ### Because() and Observations
 
@@ -141,21 +139,24 @@ public void values_should_set_correctly()
 
 # Integration Tests
 
-We use integration tests to test functionality that requires the loading of resource-heavy real objects and are generally oriented towards scenarios that run longer, open whole projects, load the whole context etc. There is also a difference in how we handle integration tests compared to normal unit tests in our Continuous Integration pipeline (AppVeyor)  --- possibly a link to our appveyor space????. Unit tests are run on every build, but integration tests are only run on the nightly builds since they are regarded as more time- and resource- consuming.
+We use integration tests to test functionality that requires the loading of resource-heavy real objects and are generally oriented towards scenarios that run longer, open whole projects, load the whole context etc. There is also a difference in how we handle integration tests compared to normal unit tests in our Continuous Integration pipeline (AppVeyor). Unit tests are run on every build, but integration tests are only run on the nightly builds since they are regarded as more time- and resource- consuming.
 
-Here we have the ContextForIntegration (if there are any further structural differences in code we should check)
+Specifically for integration tests we extend the usual `ContextSpecification<T>` of normal unit tests in `ContextForIntegration<T> : ContextSpecification<T>`. There we create and mock a few more things to begin with, the main one being an IoC container that we also fill with registrations.  
 
 ## DataBaseUpdateSpecs
 
 In PK-Sim we have a specific kind of integration tests that make sure that the database gets correctly updated and stays consistent with code and version changes.
 
+
 # Constants for Tests
 
 In order not to fill up the constant definitions that are used for the actual application, constants used only for tests should be defined in the dedicated classes [ConstantsForSpecs](https://github.com/Open-Systems-Pharmacology/OSPSuite.Core/blob/develop/tests/OSPSuite.HelpersForTests/ConstantsForSpecs.cs) in OSPSuite.Core or [CoreConstantsForSpecs](https://github.com/Open-Systems-Pharmacology/PK-Sim/blob/develop/tests/PKSim.Tests/CoreConstantsForSpecs.cs) in PK-Sim.
 
+
 # TestCaseSource()
 
 You can use [TestCaseSource()](https://docs.nunit.org/articles/nunit/writing-tests/attributes/testcasesource.html) to avoid code duplication and create parameterized tests. Examples of unit tests that take advantage of this functionality can be found in tha [OSPSuite.FuncParser repository](https://github.com/Open-Systems-Pharmacology/OSPSuite.FuncParser), for example in the [DimensionParserSpecs](https://github.com/Open-Systems-Pharmacology/OSPSuite.FuncParser/blob/master/tests/OSPSuite.FuncParser.Tests/DimensionParserSpecs.cs).
+
 
 # Unit Test Explorer
 
