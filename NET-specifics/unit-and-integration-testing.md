@@ -65,7 +65,7 @@ public class When_changing_a_NewClass_property_value : concern_for_NewClass
 }
 ```
 
-Please note the convention of naming the unit test classes using complete sentences in lowercase separated with underscores('_') instead of whitespaces. The BDDHelper then replaces the underscores with whitespaces for the test reports. The same naming logic applies to the Observations. Unit test classes usually start with "When_.." and Observations with "should_...". It is important that both the unit test class name as well as the observation fully and correctly describe the behaviour that gets tested and the expected outcome. The lenghth of the name is in this case of no big concern.
+Please note the convention of naming the unit test classes using complete sentences in lowercase separated with underscores('_') instead of whitespaces. The BDDHelper then replaces the underscores with whitespaces for the test reports. The same naming logic applies to the Observations. Unit test classes usually ( but of course not necessarily ) start with "When_.." and Observations with "should_...". It is important that both the unit test class name as well as the observation fully and correctly describe the behaviour that gets tested and the expected outcome. The lenghth of the name is in this case of no big concern.
 
 
 ### Because() and Observations
@@ -117,7 +117,26 @@ A.CallTo(() => _fake.GetValueForInput(A<InputValue>.Ignored)).MustNotHaveHappene
 
 # BDDHelper
 
-as discussed Behavior Driven Development manner(only if it really makes sense to elaborate.). It is strongly suggested to use the hereby available functionalities instead of simple NUnit(??????) Asserts for example, for connsistency, but also because some things are centrally documeted in these functions (like comparison tolerance for values for example)  
+As discussed in the introduction, we use also use the extensions from [BDDHelper](https://github.com/Open-Systems-Pharmacology/OSPSuite.BDDHelper) in our tests. It is strongly recommended to use the hereby available functionalities instead of simple NUnit Asserts, for connsistency, but also because some things are centrally implemented in these functions.  (like comparison tolerance for values for example)  
+
+So please write
+
+```
+[Observation]
+public void values_should_set_correctly()
+{
+    _myObject.DataValue.ShouldBeEqualTo(3);
+}
+```
+instead of:
+
+```
+[Observation]
+public void values_should_set_correctly()
+{
+    Assert.AreEqual(_myObject.DataValue, 3);
+}
+```
 
 
 # Integration Tests
