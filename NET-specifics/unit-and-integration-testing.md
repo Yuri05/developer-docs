@@ -64,11 +64,11 @@ public class When_changing_a_NewClass_property_value : concern_for_NewClass
 }
 ```
 
-Please note the convention of naming the unit test classes using complete sentences in lowercase separated with underscores('_') instead of whitespaces. The BDDHelper then replaces the underscores with whitespaces for the test reports. The same naming logic applies to the Observations. Unit test classes usually ( but of course not necessarily ) start with "When_.." and Observations with "should_...". It is important that both the unit test class name as well as the observation fully and correctly describe the behaviour that gets tested and the expected outcome. The lenghth of the name is in this case of no big concern.
+Please note the convention of naming the unit test classes using complete sentences in lowercase separated with underscores('_') instead of whitespaces. The BDDHelper then replaces the underscores with whitespaces for the test reports. The same naming logic applies to the Observations. Unit test classes usually ( but of course not necessarily ) start with "When_.." and Observations with "should_...". It is important that both the unit test class name as well as the observation fully and correctly describe the behaviour that gets tested and the expected outcome. The length of the name is in this case of no big concern.
 
 ### Because() and Observations
 
-Instead of packing both the behaviour that leads to a result that we want to test and the assertion of the correct outcome in one code segment, we prefer to seperate those two in a `Because()` function where we have the behaviour that will be tested and an `Observation` that tests the outcome.
+Instead of packing both the behaviour that leads to a result that we want to test and the assertion of the correct outcome in one code segment, we prefer to separate those two in a `Because()` function where we have the behaviour that will be tested and an `Observation` that tests the outcome.
 
 
 # Creation of Objects and Mocking 
@@ -93,7 +93,7 @@ var _value = new MyValue();
 A.CallTo(() => _fake.GetValueForInput(_input)).Returns(_value);
 ```
 
-making the mocked object return `_value`when `GetValueForInput()` is called with `_input` as parameter. Alternatively you can return the same value regardless of the the input parameter using `A<Type>.Ignored` like this:
+making the mocked object return `_value` when `GetValueForInput()` is called with `_input` as parameter. Alternatively you can return the same value regardless of the input parameter using `A<Type>.Ignored` like this:
 
 ```
 var _input = new InputValue();
@@ -115,7 +115,7 @@ A.CallTo(() => _fake.GetValueForInput(A<InputValue>.Ignored)).MustNotHaveHappene
 
 # BDDHelper
 
-As discussed in the introduction, we use also use the extensions from [BDDHelper](https://github.com/Open-Systems-Pharmacology/OSPSuite.BDDHelper) in our tests. It is strongly recommended to use the hereby available functionalities instead of simple NUnit Asserts, for connsistency, but also because some things are centrally implemented in these functions.  (like comparison tolerance for values for example)  
+As discussed in the introduction, we use also use the extensions from [BDDHelper](https://github.com/Open-Systems-Pharmacology/OSPSuite.BDDHelper) in our tests. It is strongly recommended to use the hereby available functionalities instead of simple NUnit Asserts, for consistency, but also because some things are centrally implemented in these functions.  (like comparison tolerance for values for example)  
 
 So please write
 
@@ -155,7 +155,7 @@ In order not to fill up the constant definitions that are used for the actual ap
 
 # TestCaseSource()
 
-You can use [TestCaseSource()](https://docs.nunit.org/articles/nunit/writing-tests/attributes/testcasesource.html) to avoid code duplication and create parameterized tests. Examples of unit tests that take advantage of this functionality can be found in tha [OSPSuite.FuncParser repository](https://github.com/Open-Systems-Pharmacology/OSPSuite.FuncParser), for example in the [DimensionParserSpecs](https://github.com/Open-Systems-Pharmacology/OSPSuite.FuncParser/blob/master/tests/OSPSuite.FuncParser.Tests/DimensionParserSpecs.cs).
+You can use [TestCaseSource()](https://docs.nunit.org/articles/nunit/writing-tests/attributes/testcasesource.html) to avoid code duplication and create parameterized tests. Examples of unit tests that take advantage of this functionality can be found in the [OSPSuite.FuncParser repository](https://github.com/Open-Systems-Pharmacology/OSPSuite.FuncParser), for example in the [DimensionParserSpecs](https://github.com/Open-Systems-Pharmacology/OSPSuite.FuncParser/blob/master/tests/OSPSuite.FuncParser.Tests/DimensionParserSpecs.cs).
 
 
 # Unit Test Explorer
