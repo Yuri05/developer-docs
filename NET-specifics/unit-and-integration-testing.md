@@ -25,7 +25,7 @@ Please follow this naming convention for the abstract unit test classes of calli
 
 Usually in this abstract class we would define the Context() override and also some protected members that would be common to all the test cases (even if their value would not stay constant for every test case). 
 
-The Context() is the setup of the test, where the environment and necessary objects are created. Functionalities that will be used overall in the test class should be defined and created here. As part of this Context() we would also usually assign the `sut` (System Under Test). 
+The Context() is the setup of the test, where the environment and necessary objects are created. Functionalities that will be used overall in the test class should be defined and created here. As part of this Context() we could assign the `sut` (System Under Test) - alternatively this could be part of the Because() that we will see in the next segment, specifically in the case that our test case concerns the instantiation of the object. 
 
 
 Apart from this Context() that would then be called ( and if necessary also overriden) for every test case which inherits from this abstract class, we can also create a GlobalContext() override, where we instantiate resource-heavy objects that are used overall in the test class, since objects in the GlobalContext() are only instantiated once per test class.
@@ -33,18 +33,45 @@ Apart from this Context() that would then be called ( and if necessary also over
 
 # The individual test cases
 
+Continuing with our example, we write an example individual unit test class:
 
+```
+public class When_changing_a_NewClass_property_value : concern_for_NewClass
+{
+    protected override void Context()
+    {
+        base.Context();
+        .
+        .
+        .
+    }
+
+    protected override void Because()
+    {
+        ...
+    }
+
+    [Observation]
+    public void should_have_updated_the_value_correctly()
+    {
+        ...
+    }
+
+    [Observation]
+    public void should_notify_about_the_change()
+    {
+        ...
+    }
+}
+```
+
+Please note the convention of naming the unit test classes using complete senteces in lowercase separated with underscores('_') instead of whitespaces. The BDDHelper then replaces the underscores with whitespaces for the test reports. The same naming logic applies to the Observations. Unit test classes usually start with "When_.." and Observations with "should_...". It is important that both the unit test class name as well as the observation fully and correctly describe the behaviour that gets tested and the expected outcome. The lenghth of the name is in this case of no big concern.
 
 
 # Because()
 
-Instead of packing both the behaviour that leads to a result that we want to test and the assertion of the correct outcome in one code segment, we prefer to seperate those two in a Because() function where we have the behaviour that will be tested and an [Observation] that tests the outcome
+Instead of packing both the behaviour that leads to a result that we want to test and the assertion of the correct outcome in one code segment, we prefer to seperate those two in a `Because()` function where we have the behaviour that will be tested and an `Observation` that tests the outcome.
 
-(example here)
-
-# Naming (could also be documented as part of each specififc segment above and not separately)
-
-for the observation classes we always use complete lowercase(?) sentences separated with underscores('_') instead of whitespaces. The BDDHelper then replaces the underscores with whitespaces for the test reports. It is important that both the class name as well as the observation fully and correctly describe the behaviour that gets tested and the expected outcome. The lenghth of the name is in this case of no big concern.
 
 # Creation of Objects and Mocking 
 
