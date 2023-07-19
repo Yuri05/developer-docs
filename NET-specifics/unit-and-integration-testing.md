@@ -147,4 +147,4 @@ Here we have the ContextForIntegration (if there are any further structural diff
 
 # Constants for Tests
 
-In order not to fill up the constant definitions that are used for the actuall application, constants used only for tests should be defined in the dedicated classes ConstantsForSpecs(this actually contains very few strings) and PKSIM::: (MoBi?????). 
+In order not to fill up the constant definitions that are used for the actual application, constants used only for tests should be defined in the dedicated classes [ConstantsForSpecs](https://github.com/Open-Systems-Pharmacology/OSPSuite.Core/blob/develop/tests/OSPSuite.HelpersForTests/ConstantsForSpecs.cs) in OSPSuite.Core or [CoreConstantsForSpecs](https://github.com/Open-Systems-Pharmacology/PK-Sim/blob/develop/tests/PKSim.Tests/CoreConstantsForSpecs.cs) in PK-Sim.
