@@ -157,3 +157,14 @@ In order not to fill up the constant definitions that are used for the actual ap
 
 You can use [TestCaseSource()](https://docs.nunit.org/articles/nunit/writing-tests/attributes/testcasesource.html) to avoid code duplication and create parameterized tests. Examples of unit tests that take advantage of this functionality can be found in tha [OSPSuite.FuncParser repository](https://github.com/Open-Systems-Pharmacology/OSPSuite.FuncParser), for example in the [DimensionParserSpecs](https://github.com/Open-Systems-Pharmacology/OSPSuite.FuncParser/blob/master/tests/OSPSuite.FuncParser.Tests/DimensionParserSpecs.cs).
 
+# Unit Test Explorer
+
+A helpful tip is to use the Unit Test Explorer of Visual Studio:
+
+![The Visual Studio Unit Test Explorer.](../assets/images/visual_studio_unit_test_explorer.png)
+
+or of Resharper:
+
+![The Resharper Unit Test Explorer.](../assets/images/resharper_unit_test_explorer.png)
+
+To run or debug a single unit test, or all the selected or even all the unit tests in a solution.
