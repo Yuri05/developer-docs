@@ -145,6 +145,15 @@ We use integration tests to test functionality that requires the loading of reso
 
 Here we have the ContextForIntegration (if there are any further structural differences in code we should check)
 
+## DataBaseUpdateSpecs
+
+In PK-Sim we have a specific kind of integration tests that make sure that the database gets correctly updated and stays consistent with code and version changes.
+
 # Constants for Tests
 
 In order not to fill up the constant definitions that are used for the actual application, constants used only for tests should be defined in the dedicated classes [ConstantsForSpecs](https://github.com/Open-Systems-Pharmacology/OSPSuite.Core/blob/develop/tests/OSPSuite.HelpersForTests/ConstantsForSpecs.cs) in OSPSuite.Core or [CoreConstantsForSpecs](https://github.com/Open-Systems-Pharmacology/PK-Sim/blob/develop/tests/PKSim.Tests/CoreConstantsForSpecs.cs) in PK-Sim.
+
+# TestCaseSource()
+
+You can use [TestCaseSource()](https://docs.nunit.org/articles/nunit/writing-tests/attributes/testcasesource.html) to avoid code duplication and create parameterized tests. Examples of unit tests that take advantage of this functionality can be found in tha [OSPSuite.FuncParser repository](https://github.com/Open-Systems-Pharmacology/OSPSuite.FuncParser), for example in the [DimensionParserSpecs](https://github.com/Open-Systems-Pharmacology/OSPSuite.FuncParser/blob/master/tests/OSPSuite.FuncParser.Tests/DimensionParserSpecs.cs).
+
