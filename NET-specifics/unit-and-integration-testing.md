@@ -75,9 +75,9 @@ Instead of packing both the behaviour that leads to a result that we want to tes
 
 # Creation of Objects and Mocking 
 
-It is suggested to avoid mocking as far as possible. I our experience this can lead to a situation where too much mocking results in a green test where the actual functionality is not correct and also to more difficult maintenance. Instead it is generally suggested to create real objects where possible and ideally to use helper functions for this task, in order to make the creation of the real objects reusable and avoid code duplication.
+It is suggested to avoid mocking as far as possible. I our experience this can lead to a situation where too much mocking results in a green test where the actual functionality is not correct and also to more difficulty in maintenance. Instead, it is generally suggested to create real objects where possible and ideally to use helper functions for this task, in order to make the creation of the real objects reusable and avoid code duplication.
 
-Before writing your own function for the creation of an object, please note that in the DomainHelperForSpecs (probably link to the repository file in github here) there already you can find functions for the creations of many frequently used objects, like e.g. individual or simulation. When writing a function to create an object that could be needed overall in the tests, it is this class exactly that should be extended.
+Before writing your own function for the creation of an object necessary for testing, please note that in the [HelpersForSpecs](https://github.com/Open-Systems-Pharmacology/OSPSuite.Core/tree/develop/tests/OSPSuite.HelpersForTests) folder you can find functions for the creations of many frequently used objects, like e.g. individual or simulation. When writing a function to create an object that could be needed overall in the tests, it is this class exactly that should be extended.
 
 As discussed, to mock objects we use FakeItEasy. On the documentation of the [package](https://fakeiteasy.github.io/) you can find a quite detailed description. Still we will present here some of the functionalities that we use more often:
 
