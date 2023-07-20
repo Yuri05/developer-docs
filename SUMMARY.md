@@ -18,13 +18,13 @@
 * [Setup OSPSuite-R on CentOS7](ospsuite-r-setup/Setup-ospsuite-R-on-CentOS7.md)
 * [Setup OSPSuite-R on Ubuntu](ospsuite-r-setup/Setup-ospsuite-R-on-Ubuntu.md)
 
-## C# Code Specifics
+## .NET Code Specifics
 
-* [Serialization](c-code-specifics/serialization.md)
-* [Unit and Integration Testing](c-code-specifics/unit-and-integration-testing.md)
-* [Commands](c-code-specifics/commands.md)
-* [Debugging](c-code-specifics/debugging.md)
-* [Data Binding](c-code-specifics/data-binding.md)
+* [Serialization](NET-specifics/serialization.md)
+* [Unit and Integration Testing](NET-specifics/unit-and-integration-testing.md)
+* [Commands](NET-specifics/commands.md)
+* [Debugging](NET-specifics/debugging.md)
+* [Data Binding](NET-specifics/data-binding.md)
 
 ## Sim Model
 
