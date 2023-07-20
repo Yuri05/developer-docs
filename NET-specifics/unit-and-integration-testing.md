@@ -75,7 +75,7 @@ Instead of packing both the behaviour that leads to a result that we want to tes
 
 It is suggested to avoid mocking as far as possible. In our experience this can lead to a situation where too much mocking results in a green test where the actual functionality is not correct and also to more difficulty in maintenance. Instead, it is generally suggested to create real objects where possible and ideally to use helper functions for this task, in order to make the creation of the real objects reusable and avoid code duplication.
 
-Before writing your own function for the creation of an object necessary for testing, please note that in the [HelpersForSpecs](https://github.com/Open-Systems-Pharmacology/OSPSuite.Core/tree/develop/tests/OSPSuite.HelpersForTests) folder you can find functions for the creations of many frequently used objects, like e.g. individuals or simulations. When writing a function to create an object that could be needed overall in the tests, it is these classes exactly that should be extended.
+Before writing your own function for the creation of an object necessary for testing, please note that in the [HelpersForSpecs](https://github.com/Open-Systems-Pharmacology/OSPSuite.Core/tree/develop/tests/OSPSuite.HelpersForTests) folder you can find functions for the creations of many frequently used objects, like e.g. individuals or simulations. When writing a function to create an object that could be needed overall in the tests, it is these classes exactly that should be extended. Especially helpful are the DomainHelperForSpecs (in all the solutions: Core, PK-Sim and MoBi) where you can find functionalities to create domain objects (you can get e.g. the path to test files, create a new test simulation, create a new test individual, test observed data etc.).
 
 ## FakeItEasy
 
@@ -168,4 +168,17 @@ or of Resharper:
 
 ![The Resharper Unit Test Explorer.](../assets/images/resharper_unit_test_explorer.png)
 
-To run or debug a single unit test, or all the selected or even all the unit tests in a solution.
+To run or debug a single unit test, or all the selected or even all the unit tests in a solution. Specifically for Resharper, you can refer to its [documentation about starting, debugging and analysing tests](https://www.jetbrains.com/help/resharper/Executing_Analyzing_Tests.html) .
+
+
+# Test Files
+
+Sometimes test files are necessary for the unit tests, such as .xlsx files as input for example. These files should be saved in the "Data" folder of the respective project, e.g. in [https://github.com/Open-Systems-Pharmacology/OSPSuite.Core/tree/develop/tests/OSPSuite.Presentation.Tests/Data](https://github.com/Open-Systems-Pharmacology/OSPSuite.Core/tree/develop/tests/OSPSuite.Presentation.Tests/Data) for `OSPSuite.Presentation.Tests.csproj`. When adding a new test file make sure you set its `Copy to Output Directory` property in Visual Studio to `Copy if newer`, otherwise the file will not be found when running the test.
+
+![The Visual Studio "Copy to Output Directory" property.](../assets/images/copy_if_newer.png)
+
+Additionally, in the PK-Sim `DomainHelperForSpecs` you can find functionalities to easily get the full path just from the name. For example, if you have a "TestData.csv" file you can get the full path like this:
+
+```
+var fullPath = DomainHelperForSpecs.DataFilePathFor("TestData.csv");
+```
