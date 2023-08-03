@@ -31,7 +31,7 @@ You can also debug the OSPSuite.Core code from an R script. To do that you need 
 2) Copy the created dlls and associated .pdb files from "OSPSuite.Core\src\OSPSuite.R\bin\Debug\netstandard2.0\" to the your OSPSuite.R installation directory and specifically in the "OSPSuite-R\inst\lib\" folder.
 
 3) Start the OSPSuite.R project in R 
-![Ospsuite.R RStudio project file.](../assets/images/![The starter view.](../assets/images/starter%20view.png)
+![Ospsuite.R RStudio project file.](../assets/images/![The starter view.](../assets/images/ospsuite-r-project.png)
 
 4) Attach the Visual Studio debugger from the OSPSuite.Core solution to the RSession. Make sure to attach to rsession NOT to rstudio.exe.
 ![Attach to rsession.](../assets/images/![The starter view.](../assets/images/rsession.png)
