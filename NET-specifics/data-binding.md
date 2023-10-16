@@ -45,7 +45,7 @@ public override void InitializeBinding()
 }
 ```
 
-In order to bind to the actual DTO object, we need a `void BindTo(MyValueDTO myValueDTO)` function as part of the interface of the view. This function can then be called from the presenter to provide the DTO object for the catual binding.
+In order to bind to the actual DTO object, we need a `void BindTo(MyValueDTO myValueDTO)` function as part of the interface of the view. This function can then be called from the presenter to provide the DTO object for the actual binding.
 
 So in the view we will have the implementation of this function:
 
@@ -72,7 +72,7 @@ public IBusinessRuleSet Rules => AllRules.Default;
 
 private static class AllRules
 {
-      private static IBusinessRule myValueGreaterThanOne
+      private static IBusinessRule myValueGreaterThanTwo
       {
       get
       {
@@ -83,7 +83,7 @@ private static class AllRules
       }
       }
 
-      public static IBusinessRuleSet Default => new BusinessRuleSet(myValueGreaterThanOne);
+      public static IBusinessRuleSet Default => new BusinessRuleSet(myValueGreaterThanTwo);
 }
 }
 ```
@@ -130,7 +130,7 @@ private OSPSuite.UI.Controls.UxComboBoxEdit myComboBoxEdit;
 .
 .
 
-//Here we are assuming we have created a DTO, the .MyClass returns an object od type MyClass 
+//Here we are assuming we have created a DTO, the .MyClass returns an object of type MyClass 
 private readonly ScreenBinder<MyDTO> _screenBinder = new ScreenBinder<MyDTO>;
 
 private readonly IFormatter<MyClass> _myClassFormatter = new MyClassFormatter();
