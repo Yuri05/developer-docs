@@ -72,6 +72,8 @@ protected override void Dispose(bool disposing)
 }
 ```
 
+When having more than one binders, it would be more reasonable to create a method called something like `disposeBinders()` and then just call from the `Dispose(bool disposing)` function above.
+
 ## Validation
 
 Going back to the simple example that we are presenting here. If we want to add validation to the values that come as input by the user for the TextEdit, we need to implement in the DTO the `IValidatable` interface. Then we have to define the rule that we need validated. Let's say that we need the float value that we are reading to be greater than 2.
