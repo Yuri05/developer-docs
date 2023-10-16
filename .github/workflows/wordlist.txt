@@ -306,3 +306,14 @@ repos
 ScreenBinder
 TextEdits
 myClassFormatter
+pathToOSPSuite
+utils
+InitializeBinding
+UxRepositoryItemButtonEdit
+buttonRepository
+AutoBind
+InitializeBinding
+WithCaption
+gridViewBinder
+JournalPageToJournalPageDTOMapper
+WithFormat
