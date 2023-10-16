@@ -66,25 +66,25 @@ Going back to the simple example that we are presenting here. If we want to add 
 ```
 public class MyValueDTO : IValidatable
 {
-public float MyValue { get; set; }
+      public float MyValue { get; set; }
 
-public IBusinessRuleSet Rules => AllRules.Default;
+      public IBusinessRuleSet Rules => AllRules.Default;
 
-private static class AllRules
-{
-      private static IBusinessRule myValueGreaterThanTwo
+      private static class AllRules
       {
-      get
-      {
-            return CreateRule.For<MyValueDTO>()
-            .Property(item => item.MyValue)
-            .WithRule((x, value) => value > 2.0)
-            .WithError("Value must be greater than 2");
-      }
-      }
+            private static IBusinessRule myValueGreaterThanTwo
+            {
+                  get
+                  {
+                        return CreateRule.For<MyValueDTO>()
+                              .Property(item => item.MyValue)
+                              .WithRule((x, value) => value > 2.0)
+                              .WithError("Value must be greater than 2");
+                  }
+            }
 
-      public static IBusinessRuleSet Default => new BusinessRuleSet(myValueGreaterThanTwo);
-}
+            public static IBusinessRuleSet Default => new BusinessRuleSet(myValueGreaterThanTwo);
+      }
 }
 ```
 
