@@ -317,3 +317,4 @@ WithCaption
 gridViewBinder
 JournalPageToJournalPageDTOMapper
 WithFormat
+screenBinder
