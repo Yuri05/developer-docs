@@ -58,6 +58,20 @@ public void BindTo(MyValueDTO myValueDTO)
 
 Like this, the binding is complete. Similarly we could expand the DTO with more fields and use it to bind to various UI elements. In the case we had f.e. a form that would consist of a drop-down, a color selector, and two TextEdits for value input, we would usually create a single DTO that would encapsulate all those values and bind to the separate visual elements. An example of such a more complex binding can be found in [ParameterIdentificationConfigurationView.cs](https://github.com/Open-Systems-Pharmacology/OSPSuite.Core/blob/develop/src/OSPSuite.UI/Views/ParameterIdentifications/ParameterIdentificationConfigurationView.cs), both in the initialization and the binding segments.
 
+When using the screenbinder it is important to remember to dispose it at the end. Usually this is done in the `Dispose()` function of the view - usually located in the designer part of the view (...MyView.Designer.cs):
+
+```
+protected override void Dispose(bool disposing)
+{
+      .
+      .
+      .
+
+      _screenBinder.Dispose();
+      base.Dispose(disposing);
+}
+```
+
 ## Validation
 
 Going back to the simple example that we are presenting here. If we want to add validation to the values that come as input by the user for the TextEdit, we need to implement in the DTO the `IValidatable` interface. Then we have to define the rule that we need validated. Let's say that we need the float value that we are reading to be greater than 2.
@@ -111,10 +125,10 @@ public class MyClassFormatter : IFormatter<MyClass>
 {
       public string Format(MyClass valueToFormat)
       {
-      if (valueToFormat == null)
-            return "No value selected";
+            if (valueToFormat == null)
+                  return "No value selected";
 
-      return valueToFormat.GetName();
+            return valueToFormat.GetName();
       }
 }
 ```
