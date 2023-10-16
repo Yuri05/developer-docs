@@ -303,3 +303,6 @@ myComboBoxEdit
 pathTo
 rCLR
 repos
+ScreenBinder
+TextEdits
+myClassFormatter
