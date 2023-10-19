@@ -84,7 +84,10 @@ public class MyValueDTO : IValidatable
 {
       public float MyValue { get; set; }
 
-      public IBusinessRuleSet Rules => AllRules.Default;
+      public MyValueDTO()
+      {
+         Rules.Add(AllRules.myValueGreaterThanTwo);
+      }
 
       private static class AllRules
       {
@@ -98,8 +101,6 @@ public class MyValueDTO : IValidatable
                               .WithError("Value must be greater than 2");
                   }
             }
-
-            public static IBusinessRuleSet Default => new BusinessRuleSet(myValueGreaterThanTwo);
       }
 }
 ```
