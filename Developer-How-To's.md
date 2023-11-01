@@ -23,7 +23,7 @@ or `Ctrl + Shift + L`
 
 ### Add or update script files
 
-`.R` files defined in `tests\dev\` will be removed from the package and can be used to simulate interaction with the package. See [scripts.R]https://github.com/Open-Systems-Pharmacology/OSPSuite-R/blob/develop/tests/dev/script.R )
+`.R` files defined in `tests\dev\` will be removed from the package and can be used to simulate interaction with the package. See [scripts.R](https://github.com/Open-Systems-Pharmacology/OSPSuite-R/wiki/tests/dev/scripts.R)
 
 ### Coding standards
 https://github.com/Open-Systems-Pharmacology/Suite/blob/develop/CODING_STANDARDS_R.md
