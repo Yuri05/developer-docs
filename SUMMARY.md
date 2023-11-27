@@ -23,6 +23,7 @@
 
 ### R Code Resources
 
+* [R Coding Standards](ospsuite-r-specifics/CODING_STANDARDS_R.md)
 * [Best Practices R](ospsuite-r-specifics/best-practices-r.md)
 * [R Code structure](ospsuite-r-specifics/r-code-structure.md)
 
