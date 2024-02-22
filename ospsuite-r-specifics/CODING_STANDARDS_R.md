@@ -10,31 +10,20 @@ This coding standards will outline the more important aspects of the aforementio
 # Modifications from tidyverse Coding Standards
 
 - Naming will use `camelCase` instead of `snake_case`.
-
 - Favor usage of `return()` even when the return value does not need to be specified explicitly.
 
 # RStudio IDE Settings
 
 - Indentation of 2
-
 - Use spaces instead of tabs
-
 - Use UTF-8 text encoding (Ref: <https://yihui.org/en/2018/11/biggest-regret-knitr/>)
-
-
-<img src="../assets/images/utf8.jfif" alt="drawing" width="300"/>
-
+  <img src="../assets/images/utf8.jfif" alt="drawing" width="300"/>
 - Use `{tinytex}` for `LaTeX` compilation (Ref: <https://yihui.org/tinytex/pain/>)
-
-<img src="../assets/images/tinytex.jfif" alt="drawing" width="300"/>
-
+  <img src="../assets/images/tinytex.jfif" alt="drawing" width="300"/>
 - Use AGG graphics device (Ref: <https://www.tidyverse.org/blog/2021/02/modern-text-features/>)
-
-<img src="../assets/images/agg.jfif" alt="drawing" width="300"/>
-
+  <img src="../assets/images/agg.jfif" alt="drawing" width="300"/>
 - Use a blank slate (there should not be any residue from previous session when you start a new session to ensure long-term reproducibility of the software)
-
-<img src="../assets/images/blank.PNG" alt="drawing" width="300"/>
+  <img src="../assets/images/blank.PNG" alt="drawing" width="300"/>
 
 # Naming Convention
 

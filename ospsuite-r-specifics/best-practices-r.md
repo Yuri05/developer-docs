@@ -26,7 +26,8 @@ or `Ctrl + Shift + L`
 `.R` files defined in `tests\dev\` will be removed from the package and can be used to simulate interaction with the package. See [scripts.R](https://github.com/Open-Systems-Pharmacology/OSPSuite-R/wiki/tests/dev/scripts.R)
 
 ### Coding standards
-https://github.com/Open-Systems-Pharmacology/Suite/blob/develop/CODING_STANDARDS_R.md
+
+Coding standards are described [here](CODING_STANDARDS_R.md)
 
 ### Useful literature
 - [**Advanced R** by Hadley Wickham](https://adv-r.hadley.nz/)
