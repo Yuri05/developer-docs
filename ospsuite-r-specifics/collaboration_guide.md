@@ -38,7 +38,7 @@ This workflow imply that:
 -   R and R Studio are installed,
 -   A GitHub account is available and setup to work within RStudio,
 -   The `{usethis}` package is installed,
--   A clone (from original repository or from a fork) has been created.
+-   A local clone (from original repository or from a fork) has been created.
 
 #### Workflow
 
