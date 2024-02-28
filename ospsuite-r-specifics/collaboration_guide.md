@@ -82,6 +82,8 @@ This workflow implies that:
 - A local clone (from original repository or from a fork) has been created.
 - The current branch is the default branch (usually `main`).
 
+#### Workflow
+
 The recommended workflow for contributing to the OSPS R projects heavily relies on the [`{usethis}`](https://usethis.r-lib.org) package.
 
 1. Pick the new version number using the following command (refer to [this](https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number) to make the right choice).
