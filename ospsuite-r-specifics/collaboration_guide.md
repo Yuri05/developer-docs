@@ -12,16 +12,16 @@ isolated context.
   1.3 Each change should be proposed through a pull request.  
   
 2. Each change or addition to the code should be documented and controlled.  
-  2.1 Each change in the code should be reflected in the documentation. If 
+  2.1 Each change that affects **user experience or outputs** be reflected in the documentation. If 
   documentation is not present, then it should be created.  
   2.2 Each change should be tested. If new cases emerge, then they should be 
   tested, even if some tests are already present. If no tests are present, then
   they should be created.  
   
-3. Each change should be easily reviewable, understandable and accessible.   
-  3.1 Each change should have a corresponding entry in the `NEWS` file.  
+3. Each change should be easily reviewable, understandable and traceable.   
+  3.1 Each change that affects **user experience or outputs** should have a corresponding entry in the `NEWS` file.  
   3.2 Each change should be associated with a pull request which scope is limited to the change itself.  
-  
+
   
 4. Each change must respect the coding style of the project.    
   4.1 Each change must respect the coding style of the project as defined in the [R Coding Standards](CODING_STANDARDS_R.md).  
@@ -70,7 +70,6 @@ This workflow implies that:
 
 **This section is only applicable for the following repositories:**
   - `{OSPSuite.ParameterIdentification}`
-  - `{esqlabsR}`
   
 #### Prerequisites
 
@@ -89,7 +88,7 @@ The recommended workflow for contributing to the OSPS R projects heavily relies 
 1. Pick the new version number using the following command (refer to [this](https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number) to make the right choice).
 ```r
 new_version <- usethis:::choose_version("What should the new version be?")
-  ```
+```
 2. Create a dedicated branch
 ```r
 usethis::pr_init(branch = paste("release", new_version, sep = "-"))
