@@ -129,17 +129,17 @@ The recommended workflow for contributing to the OSPS R projects heavily relies 
   ✔ Making a commit with message 'Increment version number to ...'
   ```
 
-5. Push the local branch and create the pull request by running:
+4. Push the local branch and create the pull request by running:
   
   ```r
   usethis::pr_push()
   ```
 
-6. Once the pull request is approved and merged, the local branch can be cleaned away using `usethis::pr_finish()`.
+5. Once the pull request is approved and merged, the local branch can be cleaned away using `usethis::pr_finish()`.
 
-7. Make sure the current branch is the default branch (usually `main`) and create the release on github using: `usethis::use_github_release()`
+6. Make sure the current branch is the default branch (usually `main`) and create the release on github using: `usethis::use_github_release()`
 
-8. Now, the package must be put back to development mode. For this, we will create another Pull Request in which we will repeat the previous steps but with a different version number. The development version number ends with a `.9000` so that both dev and users can easily distinguish between the two.  
+7. Now, the package must be put back to development mode. For this, we will create another Pull Request in which we will repeat the previous steps but with a different version number. The development version number ends with a `.9000` so that both dev and users can easily distinguish between the two.  
   Pick "dev" after executing the following code:
   
   ```r
@@ -155,6 +155,6 @@ The recommended workflow for contributing to the OSPS R projects heavily relies 
   4:   dev --> X.Y.Z.9000
   ```
 
-9. Repeat steps 2 to 6.
+8. Repeat steps 2 to 5.
 
 
