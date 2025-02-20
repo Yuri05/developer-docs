@@ -17,7 +17,7 @@
 
 1. Add `OSPSuite.Core` as a nuget source using the following command
 ```
-  nuget sources add -name ospsuite-core -source https://ci.appveyor.com/nuget/ospsuite-core
+  nuget sources add -name OSP-GitHub-Packages -source https://nuget.pkg.github.com/Open-Systems-Pharmacology/index.json
 ```
 
 ## Building and Running
@@ -36,16 +36,14 @@
 
 ## Useful Tips
 
-1. The suite is using appveyor as a CI server which also provides a nuget feed that should be registered on your system. This will prevent you from having to enter AppVeyor password with each new instance of Visual Studio. This option is only available for developers with access to the appveyor feed. If you wish to be granted access to the feed, please let us know by posting a request in the forum.
+1. The suite is using GitHub Actions as a CI server which also provides a nuget feed that should be registered on your system. This will prevent you from having to enter GitHub password with each new instance of Visual Studio.
 
 ```
-nuget sources add -Name AppVeyor -source https://ci.appveyor.com/nuget/open-systems-pharmacology-ci -User <EMAIL_ADDRESS> -Password <MY_PASSWORD>
+nuget sources add -Name OSP-GitHub-Packages -source https://nuget.pkg.github.com/Open-Systems-Pharmacology/index.json -User <GITHUB USERNAME> -Password <PERSONAL ACCESS TOKEN>
 ```
 
 or
 
 ```
-dotnet nuget add source https://ci.appveyor.com/nuget/open-systems-pharmacology-ci -u <EMAIL_ADDRESS> -p <PASSWORD> -n AppVeyor
+dotnet nuget add source --username <GITHUB USERNAME> --password <PERSONAL ACCESS TOKEN> --store-password-in-clear-text --name OSP-GitHub-Packages "https://nuget.pkg.github.com/Open-Systems-Pharmacology/index.json"
 ```
-
-If you set up your AppVeyor account using GitHub authentication, you'll need to contact an [OSPSuite adminsitrator](https://github.com/orgs/Open-Systems-Pharmacology/teams/suite-core-developers) to set up a password on AppVeyor to use for authentication.
