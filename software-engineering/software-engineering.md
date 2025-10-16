@@ -55,7 +55,10 @@ Continuous integration of the OSP Suite is realized through [Github Actions](htt
   * Setups of different OSP Platform tools as well as of the whole Suite are created nightly
 * Code quality analysis (e.g. static code analysis, test coverage)
 * Artifact repository (setup, reports): Nightly builds that incorporate any new features/fixes can be accessed by anyone for beta testing. Full testing and code coverage reports can be accessed and investigated by all for each build.
-* Semantic code analysis with [CodeQL](https://codeql.github.com/docs/codeql-overview/about-codeql/) scanning for security vulnerabilities
+* Semantic code analysis with [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) and [CodeQL](https://codeql.github.com/docs/codeql-overview/about-codeql/) scanning for security vulnerabilities
+  * Dependabot scans repository for known vulnerable dependencies
+  * CodeQL scans the source code for known vulnerabilites
+  * Both scanners alert developers to newly created, or newly added vulnerabilities and can create issues to be addressed or are reported in the security tab of the repository
 
 ## Validation
 Validation of computerized system: Comprehensive library of test cases that grows with every newly released feature, including manual or automatic with validated programs.
