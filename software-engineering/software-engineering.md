@@ -1,6 +1,6 @@
 # Software Engineering
 
-The Open Systems Pharmacology Suite (OSP Suite) is the open-source platform. The OSP Suite is the result of over 15 years of effort from experts in software development, database management, mathematics, biology, physiology, pharmacokinetics, pharmacology, and systems biology. This multi-million dollar platform was made open-source in early 2017 to accelerate the development and application of PBPK models and systems modeling in the drug development process.
+The Open Systems Pharmacology Suite (OSP Suite) is the open-source platform. The OSP Suite is the result of over 20 years of effort from experts in software development, database management, mathematics, biology, physiology, pharmacokinetics, pharmacology, and systems biology. This multi-million dollar platform was made open-source in early 2017 to accelerate the development and application of PBPK models and systems modeling in the drug development process.
 
 ## Source Control
 The OSP Suite uses GitHub as a source control platform.
@@ -15,6 +15,9 @@ In addition to source code, GitHub supports the following formats and features:
 * Documentation, including automatically rendered README files in a variety of Markdown-like file formats
 * Issue tracking (including feature requests) with labels, milestones, assignees and a search engine
 * Wikis
+* [GitHub Codespaces](https://en.wikipedia.org/wiki/GitHub_Codespaces), an online Integrated Development Environment (IDE) providing users with a virtual machine intended to be a work environment to build and test code
+* [Discussions](https://docs.github.com/en/discussions)
+* Security Alerts of known [common vulnerabilities and exposures](https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures) in different packages
 * Pull requests with code review and comments
 * Commits history
 * Graphs: pulse, contributors, commits, code frequency, punch card, network, members
@@ -57,7 +60,7 @@ Continuous integration of the OSP Suite is realized through [Github Actions](htt
 * Artifact repository (setup, reports): Nightly builds that incorporate any new features/fixes can be accessed by anyone for beta testing. Full testing and code coverage reports can be accessed and investigated by all for each build.
 * Semantic code analysis with [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) and [CodeQL](https://codeql.github.com/docs/codeql-overview/about-codeql/) scanning for security vulnerabilities
   * Dependabot scans repository for known vulnerable dependencies
-  * CodeQL scans the source code for known vulnerabilites
+  * CodeQL scans the source code for known vulnerabilities
   * Both scanners alert developers to newly created, or newly added vulnerabilities and can create issues to be addressed or are reported in the security tab of the repository
 
 ## Validation
