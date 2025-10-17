@@ -7,9 +7,9 @@ As of January 2023, GitHub reports having over 100 million users and more than 4
 
 Among others, GitHub is used by companies like Google or Microsoft for the code hosting. https://github.com/google https://github.com/microsoft
 
-Source code on the OSP can be modified by the OSP Maintainers only. OSP Maintainers consists of a very limited number of people (and is a subset of OSP Management Team (MT), OSP Sounding Board (SB) and OSP Core Developers (DEV)).
+Source code on the OSP can be modified by the OSP Maintainers only. OSP Maintainers consist of a very limited number of people (and is a subset of OSP Management Team (MT), OSP Sounding Board (SB) and OSP Core Developers (DEV)).
 
-When source code modifications must be done, the procedure is as following:
+When source code modifications must be done, the procedure is as follows:
 
 * Any user can propose changes for the software by creating a so called Pull Request (PR) https://en.wikipedia.org/wiki/Distributed_version_control#Pull_requests
 
@@ -24,7 +24,7 @@ When source code modifications must be done, the procedure is as following:
 This is a well-established procedure used particularly by GitHub for open source and closed source (commercial) software, used by millions of customers.
 
 ## Build Process
-Building of the OSP Libraries and Setups is realized in a fully automated manner via GitHub Actions CI service [(s. section Software Engineering/Continuous Integration)](software-engineering.md/#continuous-integration).
+Building of the OSP Libraries and Setups is realized in a fully automated manner via GitHub Actions CI service [(s. section Software Engineering/Continuous Integration)](software-engineering.md#continuous-integration).
 
 When building a library or a setup: the corresponding source code from the OSP is transferred into such a build environment and a build process is triggered; resulting build artifacts (libraries/setups) are stored in the GitHub cloud.
 
@@ -43,7 +43,7 @@ This process is fully automated. Particularly:
 
   * Full list of changes
   * Date and time stamp
-  * Names of the contributor
+  * Names of the contributors
   * Names of the Reviewers
   * Name of the person who has integrated the changes (accepted the corresponding PR)
   * Links to associated validation reports
