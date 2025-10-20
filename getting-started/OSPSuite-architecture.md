@@ -143,58 +143,6 @@ This project contains all the integration tests ever written for OSPSuite. The f
 
 In the tests of this project we are extending `OSPSuite.Core.ContextForIntegration<T>`. It registers almost all dependencies as the real OSPSuite applications would do, with the exception of a few objects like license or dialog creator. It is the perfect base class to use when testing real uses cases using the database etc… Execution time is much longer than a standard unit test.
 
-### Additional elements of the OSPSuite.Core solution
-
-The OSPSuite.Core repository contains the [appveyor.yml](https://github.com/Open-Systems-Pharmacology/OSPSuite.Core/blob/develop/appveyor.yml) file that helps configure [appveyor](https://www.appveyor.com/) that we are using as a CI/CD service. There you can define f.e. things like which branches that get built, if the artifacts are published on a PR and more:
-
-```
-configuration: Debug
-image: Visual Studio 2022
-
-.
-.
-.
-
-dotnet_csproj:
-  patch: true
-  file: '**\*.csproj'
-  version: '$(ospsuite_version).$(build_number)'
-  assembly_version: '$(ospsuite_version).$(build_number)'
-  file_version: '$(ospsuite_version).$(build_number)'
-  informational_version: '$(ospsuite_version).$(build_number)'
-
-.
-.
-.
-
-build:
-  publish_nuget: true
-  verbosity: minimal
-  publish_nuget_symbols: true
-  project: OSPSuite.Core.sln
-
-pull_requests: 
-  do_not_increment_build_number: true
-
-branches:
-  only:
-    - develop
-.
-.
-.
-
-```
-
-There we also define the OSPSuite version. The product version contains 4 different sections:
-
-X.Y.Z.R
-
-X.Y is the product version. Z is the build version. The current version of the product is 11.2.1
-R is set automatically during build from the NAnt script according to the svn revision number.
-
-
-
-
 ## PKSim Project Structure
 
 ![The PKSim solution structure](../assets/images/pksim_solution.png)
