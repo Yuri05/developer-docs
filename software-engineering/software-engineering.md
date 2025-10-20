@@ -42,7 +42,7 @@ Release planning is realized via the GitHub “Projects” feature. Issues are o
 
 Approved “official” releases of the OSP Suite are published on the GitHub Platform and can be downloaded by any user (no GitHub account is required for this). Full release histories are available on GitHub and include any changes made in the release from the previous version and any Release Notes.
 
-![OSPSuite Release Notes](../assets/images/release-notes.png)
+![OSP Suite Release Notes](../assets/images/release-notes.png)
 
 ## Continuous Integration
 Continuous Integration (CI) is a software development practice that aims at preventing code integration problems and improving overall software quality. It requires developers to update their code (commit) into a code repository. Periodically or even after each commit, the code is verified by an automated build running on the Continuous Integration Server (CI Server). Upon build completion, teams are notified of any defects or issues that were found thus allowing developers to detect and fix problems early. The Continuous Integration Process (CI Process) describes the tasks to be performed by the automated build.
