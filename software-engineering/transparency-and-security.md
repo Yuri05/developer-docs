@@ -55,11 +55,11 @@ Example: https://github.com/Open-Systems-Pharmacology/Suite/commits/master
 ### Software Builds
 
 * All software builds are tracked and saved in the build history, including:
-* Link to the used version of the source code on GitHub
-* Date and time stamp
-* Full build log
-* Test protocols of all automated tests
-* All produced build artifacts
+  * Link to the used version of the source code on GitHub
+  * Date and time stamp
+  * Full build log
+  * Test protocols of all automated tests
+  * All produced build artifacts
   
 Example: https://github.com/Open-Systems-Pharmacology/Suite/actions
 
