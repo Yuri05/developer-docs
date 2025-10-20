@@ -136,7 +136,7 @@ There are some "special" containers defined in *tab_container_names* that are no
   * otherwise: container is NOT added to the model
 * if `usage_in_individual = EXTENDED`
   * container is added to the model in any case
-  * containers of this type usually should not be defined in *[tab_population_containers](#tab_population_containers)* (TODO [s. the discussion](https://github.com/Yuri05/DB_Questions/discussions/1))
+  * containers of this type usually should not be defined in *[tab_population_containers](#tab_population_containers)* <!--(TODO [s. the discussion](https://github.com/Yuri05/DB_Questions/discussions/1))-->
 
 ## Processes  <a id="section-processes"></a>
 
@@ -292,7 +292,7 @@ There are some "special" containers defined in *tab_container_names* that are no
 
 **tab_transports** <a id="tab_transports"></a> defines which active transports can be created in the model. 
 (TODO rename the table, s. the issue https://github.com/Open-Systems-Pharmacology/PK-Sim/issues/2309)
-(TODO [s. the discussion](https://github.com/Yuri05/DB_Questions/discussions/5))
+<!--(TODO [s. the discussion](https://github.com/Yuri05/DB_Questions/discussions/5))-->
 
 
 **tab_transport_directions** <a id="tab_transport_directions"></a> defines all available transport directions
@@ -320,9 +320,9 @@ See [Localizations, directions, and initial concentrations of transport proteins
 
 **tab_species** <a id="tab_species"></a> defines a species.
 
-* **user_defined** (TODO [s. the discussion](https://github.com/Yuri05/DB_Questions/discussions/6))
+* **user_defined** <!--(TODO [s. the discussion](https://github.com/Yuri05/DB_Questions/discussions/6))-->
 
-* **is_human** (TODO [s. the discussion](https://github.com/Yuri05/DB_Questions/discussions/7))
+* **is_human** <!--(TODO [s. the discussion](https://github.com/Yuri05/DB_Questions/discussions/7)) -->
 
 
 **tab_populations** <a id="tab_populations"></a> defines which populations are available for a given species.
@@ -979,10 +979,10 @@ S. the [OSP Documentation on events](https://docs.open-systems-pharmacology.org/
 **tab_observers** <a id="tab_observers"></a> specifies an observer.
 
 * **observer** name of the observer.
-* **observer_type** TODO s. [the discussion](https://github.com/Yuri05/DB_Questions/discussions/9).
-* **category** always set to `"Observer"`. (TODO [s. the discussion](https://github.com/Yuri05/DB_Questions/discussions/10)).
+* **observer_type** <!--TODO s. [the discussion](https://github.com/Yuri05/DB_Questions/discussions/9).-->
+* **category** always set to `"Observer"`. <!--(TODO [s. the discussion](https://github.com/Yuri05/DB_Questions/discussions/10)).-->
 * **builder_type** "`AMOUNT`" or "`CONTAINER`", which corresponds to "Molecule Observer" and "Container Observer in MoBi" (s. the [OSP Suite documentation](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/building-block-concepts#observers) for details).
-* **is_for_all_molecules** (TODO s. [the discussion](https://github.com/Yuri05/DB_Questions/discussions/11))
+* **is_for_all_molecules** <!--(TODO s. [the discussion](https://github.com/Yuri05/DB_Questions/discussions/11))-->
 * **dimension** dimension of the observer.
 
 
@@ -993,7 +993,7 @@ S. the [OSP Documentation on events](https://docs.open-systems-pharmacology.org/
 
 * **observer** name of the observer.
 * **tag** is a tag of a container in which the observer should (or should not) be created.
-* **tag_type** Is always set to "`PARENT`" (TODO [s. the discussion](https://github.com/Yuri05/DB_Questions/discussions/12))
+* **tag_type** Is always set to "`PARENT`" <!--(TODO [s. the discussion](https://github.com/Yuri05/DB_Questions/discussions/12))-->
 * **should_have** specifies whether the target container should or should not have the given tag.. 
 
 ## Entities defined by formulas <a id="section-formula-entities"></a>
@@ -1051,7 +1051,7 @@ The picture above shows an overview of all quantities which are described by a f
 **tab_model_transport_molecule_names** restricts which molecules are transported by a passive transport for particular model and is described [above](#tab_model_transport_molecule_names).
 
 
-**tab_container_molecules** <a id="tab_container_molecules"></a> used for referential integrity only; not exposed to PK-Sim. (TODO s. [the discussion](https://github.com/Yuri05/DB_Questions/discussions/13))
+**tab_container_molecules** <a id="tab_container_molecules"></a> used for referential integrity only; not exposed to PK-Sim. <!--(TODO s. [the discussion](https://github.com/Yuri05/DB_Questions/discussions/13))-->
 
 
 **tab_model_container_molecules** <a id="tab_model_container_molecules"></a> overwrites some default (global) molecule properties on the model container level.
