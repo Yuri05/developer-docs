@@ -24,7 +24,7 @@ When source code modifications must be done, the procedure is as follows:
 This is a well-established procedure used particularly by GitHub for open source and closed source (commercial) software, used by millions of customers.
 
 ## Build Process
-Building of the OSP Libraries and Setups is realized in a fully automated manner via GitHub Actions CI service [(s. section Software Engineering/Continuous Integration)](./software-engineering.md#continuous-integration).
+Building of the OSP Libraries and Setups is realized in a fully automated manner via GitHub Actions CI service [(s. section Software Engineering/Continuous Integration)](software-engineering.md#continuous-integration).
 
 When building a library or a setup: the corresponding source code from the OSP is transferred into such a build environment and a build process is triggered; resulting build artifacts (libraries/setups) are stored in the GitHub cloud.
 
