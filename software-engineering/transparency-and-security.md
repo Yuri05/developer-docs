@@ -5,7 +5,7 @@ The whole source code of the OSP Suite is stored and versioned on GitHub.
 
 As of January 2023, GitHub reports having over 100 million users and more than 420 million repositories (including at least 28 million public repositories), making it the largest host of source code in the world.
 
-Among others, GitHub is used by companies like Google or Microsoft for the code hosting, eg [Google](https://github.com/google) and [Microsoft](https://github.com/microsoft)
+Among others, GitHub is used by companies like Google or Microsoft for the code hosting, for example [Google](https://github.com/google) and [Microsoft](https://github.com/microsoft)
 
 Source code on the OSP can be modified by the OSP Maintainers only. OSP Maintainers consist of a very limited number of people (and is a subset of OSP Management Team (MT), OSP Sounding Board (SB) and OSP Core Developers (DEV)).
 
