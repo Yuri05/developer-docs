@@ -38,7 +38,7 @@ The Forum is used e.g. for scientific discussions related to the OSP platform an
 ## Release Planning
 Release planning is realized via the GitHub “Projects” feature. Issues are organized by milestones and effort estimates are proposed and tracked. Release planning is done by the OSP Management Team.
 
-![OSPSuite Release Planning](../assets/images/release-planning.png)
+![OSP Suite Release Planning](../assets/images/release-planning.png)
 
 Approved “official” releases of the OSP Suite are published on the GitHub Platform and can be downloaded by any user (no GitHub account is required for this). Full release histories are available on GitHub and include any changes made in the release from the previous version and any Release Notes.
 
