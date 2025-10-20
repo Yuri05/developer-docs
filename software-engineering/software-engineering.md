@@ -22,7 +22,7 @@ In addition to source code, GitHub supports the following formats and features:
 * Commits history
 * Graphs: pulse, contributors, commits, code frequency, punch card, network, members
 * Email notifications and the option to subscribe someone to notifications by @ mentioning them
-* GitHub Pages: small websites can be hosted from public repositories on GitHub. This is what we have done for the OSP Suite where the site https://www.open-systems-pharmacology.org/ is a user friendly gateway to the OSP Platform
+* GitHub Pages: small websites can be hosted from public repositories on GitHub. This is what we have done for the OSP Suite where the site https://www.open-systems-pharmacology.org/ is a user-friendly gateway to the OSP Platform
 * PDF document viewer
 
 ## Issue Tracking
