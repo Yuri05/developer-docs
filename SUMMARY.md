@@ -49,8 +49,8 @@
 
 * [Algorithm for Individual Creation](algorithms/algorithm-for-individual-creation.md)
 
-## Software engineering, transparency and security
+## Software Engineering, Transparency and Security
 
 * [User Roles and Responsibilities](software-engineering/user-roles-and-responsibilities.md)
 * [Software Engineering](software-engineering/software-engineering.md)
-* [Transparency and security](software-engineering/transparency-and-security.md)
+* [Transparency and Security](software-engineering/transparency-and-security.md)
