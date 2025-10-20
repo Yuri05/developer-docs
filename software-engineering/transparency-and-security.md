@@ -61,7 +61,7 @@ Example: https://github.com/Open-Systems-Pharmacology/Suite/commits/master
 * Test protocols of all automated tests
 * All produced build artifacts
   
-Example: https://ci.appveyor.com/project/open-systems-pharmacology-ci/suite/history
+Example: https://github.com/Open-Systems-Pharmacology/Suite/actions
 
 * Build history entries cannot be modified
 
