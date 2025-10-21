@@ -83,6 +83,7 @@ The **default** branch and the **main** branch (if different from the default) i
 
 * This prevents any user (including repository maintainers and organization administrators) from directly pushing code into a protected branch without first creating a pull request.
 * Every pull request can only be merged after being approved by the repository maintainer(s).
+  
   ![Branch Protection](../assets/images/branch-protection.png) 
 
 ### Static Application Security Testing (SAST)
