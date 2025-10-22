@@ -69,7 +69,7 @@ Describes an abstract container (e.g. "Plasma"), which can be inserted at variou
 * **extension** is not used by PK-Sim and is only useful for some database update scripts.
 * **icon_name** defines which icon is used for a container. 
 
-There are some "special" containers defined in *tab_container_names* that are not used in the container hierarchy defined in *[tab_containers](#tab_containers)*. These containers are only used for **referential integrity when defining some relative object paths** (see the [Formulas](#formulas-calculation-method-rates) section for more details).
+There are some "special" containers defined in *tab_container_names* that are not used in the container hierarchy defined in *[tab_containers](#tab_containers)*. These containers are only used for **referential integrity when defining some relative object paths** (see the [Formulas](#formulas) section for more details).
 
 
 ### tab_container_types
@@ -546,7 +546,7 @@ Defines a formula for the given parameter in the given container.
 
 * **container_id**, **container_type**, **container_name** defines the container.
 * **parameter_name** defines the parameter in the given container.
-* **calculation_method**, **formula_rate** defines the formula (s. the section [Formulas (Calculation method - rates)](#formulas-calculation-method-rates) for more details on formulas).
+* **calculation_method**, **formula_rate** defines the formula (s. the section [Formulas](#formulas) for more details on formulas).
 
 
 ### tab_container_parameter_values
@@ -642,7 +642,7 @@ Another task of this table is to dynamically assign formulas to the "main" param
 ### tab_calculation_method_parameter_descr_conditions
 Defines the containers in which a supporting parameter should be created. Containers are described by their tags; single criteria conditions for a parameter id are combined by `AND`.
 
-## Formulas (Calculation method - rates)
+## Formulas
 This section describes the formulas defined in the PK-Sim database. This includes:
 
 * formulas defined by an analytical equation (*explicit formulas*) 
@@ -897,7 +897,7 @@ Defines available PBPK models, which can be selected during the simulation creat
 
 
 ### tab_calculation_methods
-Defines a *calculation method* (**CM**). A calculation method describes how a **group of quantities** (parameters, molecule initial values, etc.) are defined by their formulas. A decision about which quantities should be described by the same CM is usually based on information about which formulas would change when the user switches from one (sub)model to another. For example, if the user chooses a different method for calculating the *Body Surface Area* (BSA) - only the BSA parameter itself is affected, and thus only this parameter is described by the corresponding calculation method. If the user chooses another method for calculating the surface area between the plasma and the interstitial space - the *Surface Area (Plasma/Interstitial)* parameters in all tissues organs are affected: thus all these parameters are grouped in the same calculation method. More details on calculation methods are provided in the section [Formulas (Calculation method - rates)](#formulas-calculation-method-rates).
+Defines a *calculation method* (**CM**). A calculation method describes how a **group of quantities** (parameters, molecule initial values, etc.) are defined by their formulas. A decision about which quantities should be described by the same CM is usually based on information about which formulas would change when the user switches from one (sub)model to another. For example, if the user chooses a different method for calculating the *Body Surface Area* (BSA) - only the BSA parameter itself is affected, and thus only this parameter is described by the corresponding calculation method. If the user chooses another method for calculating the surface area between the plasma and the interstitial space - the *Surface Area (Plasma/Interstitial)* parameters in all tissues organs are affected: thus all these parameters are grouped in the same calculation method. More details on calculation methods are provided in the section [Formulas](#formulas).
 
 * **category** calculation methods belonging to the same category are alternatives, which can be selected by user.
 
@@ -1027,7 +1027,7 @@ Defines the event condition of an event.
 
 ### tab_event_changed_generic_parameters
 
-Define which parameters or molecule amounts are modified by an event. The referencing of the modified quantities of an event is done in the same way as the referencing of the quantities used in a formula and defined in the tables *[tab_rate_container_molecules](#tab_rate_container_molecules)*, *[tab_rate_container_parameters](#tab_rate_container_parameters)*, *[tab_rate_generic_molecules](#tab_rate_generic_molecules)*, *[tab_rate_generic_parameters](#tab_rate_generic_parameters)* (s. the section [Formulas (Calculation method - rates)](#formulas-calculation-method-rates)) for details.
+Define which parameters or molecule amounts are modified by an event. The referencing of the modified quantities of an event is done in the same way as the referencing of the quantities used in a formula and defined in the tables *[tab_rate_container_molecules](#tab_rate_container_molecules)*, *[tab_rate_container_parameters](#tab_rate_container_parameters)*, *[tab_rate_generic_molecules](#tab_rate_generic_molecules)*, *[tab_rate_generic_parameters](#tab_rate_generic_parameters)* (s. the section [Formulas](#formulas)) for details.
 
 * {**event_id**, **event_container_type**, **event_name**} are the id, type and name of the event container.
 * {**calculation_method**, **formula_rate**} defines the formula that will be applied to the changed quantity when the event is triggered.
