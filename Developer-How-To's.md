@@ -6,7 +6,7 @@ In this part of the documentation we will present a compilation of useful inform
 
 ### theme
 
-If you like vscode theme, use `https://github.com/anthonynorth/rscodeio`
+If you like vscode theme, use [`https://github.com/anthonynorth/rscodeio`](https://github.com/anthonynorth/rscodeio)
 
 ### dev_mode
 
@@ -30,7 +30,7 @@ or `Ctrl + Shift + L`
 `.R` files defined in `tests\dev\` will be removed from the package and can be used to simulate interaction with the package. See [scripts.R](https://github.com/Open-Systems-Pharmacology/OSPSuite-R/wiki/tests/dev/scripts.R)
 
 ### Coding standards
-https://github.com/Open-Systems-Pharmacology/Suite/blob/develop/CODING_STANDARDS_R.md
+See [Coding standards for R](ospsuite-r-specifics/CODING_STANDARDS_R.md)
 
 ### Useful literature
 - [**Advanced R** by Hadley Wickham](https://adv-r.hadley.nz/)
@@ -81,8 +81,8 @@ profvis({
 ### Setting up Linux environment for R development
 As an example, a Hyper-V Virtual Machine under Windows 10 is used. Currently tested with Ubuntu 19.10
 1. #### Install Ubuntu
-  * Download Ubuntu from https://ubuntu.com/download/desktop
-  * Tutorial: https://www.youtube.com/watch?v=oyNjjzg-UXo
+  * Download Ubuntu from [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
+  * Tutorial: [https://www.youtube.com/watch?v=oyNjjzg-UXo](https://www.youtube.com/watch?v=oyNjjzg-UXo)
 = >This is a very good intro to get ubuntu installed from scratch
 
 2. #### Install git
@@ -97,32 +97,6 @@ As an example, a Hyper-V Virtual Machine under Windows 10 is used. Currently tes
 5. #### Install R Studio
   * Download R studio from [here](https://www.rstudio.com/products/rstudio/download/#download)
 
-6. #### Install devtools
-- `sudo apt update`
-- `sudo apt-get install libcurl4-openssl-dev`
-- `sudo apt-get install libssl-dev`
-- `sudo apt install libxml2-dev`
-- Install devtool from R Studio from CRAN
-
-7. #### Install mono (as described here https://www.mono-project.com/download/stable/)
-- `sudo apt install gnupg ca-certificates`
-- `sudo apt autoremove`
-- `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF`
-- Install the 5.18 version, as the latest stable is bugged atm: `echo "deb https://download.mono-project.com/repo/ubuntu stable-bionic/snapshots/5.18 main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list`
-
-***
-LATEST DOES NOT WORK AT THE MOMENT
-- _Alternative:_ install latest stable: `echo "deb https://download.mono-project.com/repo/ubuntu stable-bionic main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list`
-
-***
-
-- `sudo apt update`
-- `sudo apt install mono-complete`
-
-8. #### Install some missing dependencies required to build rClr
-- `sudo apt-get install libglib2.0-dev`
-
-9. #### Install .NET SDK
-- See https://aka.ms/dotnet-download
-
-10. _Optionally:_ Install [MonoDevelop](https://www.monodevelop.com/)
+6. #### Install OSPSuite-R
+- [Prerequisites](https://github.com/Open-Systems-Pharmacology/rSharp?tab=readme-ov-file#ubuntu)
+- [Main Package](https://github.com/Open-Systems-Pharmacology/OSPSuite-R#ospsuite-r-package)
