@@ -1,8 +1,16 @@
 name: Check Markdown links
 
-on: 
-  [push, pull_request]
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+  workflow_dispatch:
  
+permissions:
+  contents: read
+
 jobs:
   markdown-link-check:
     uses: Open-Systems-Pharmacology/Workflows/.github/workflows/MarkdownLinksCheck.yml@main

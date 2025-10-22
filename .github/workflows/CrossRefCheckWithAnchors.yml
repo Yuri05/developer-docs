@@ -1,7 +1,15 @@
 name: CrossRefCheck with Anchors
 
-on: 
-  [push, pull_request]
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+  workflow_dispatch:
+ 
+permissions:
+  contents: read
 
 jobs:
   crossref-check-with-anchors:
