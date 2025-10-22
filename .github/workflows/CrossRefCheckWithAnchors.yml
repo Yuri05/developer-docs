@@ -1,5 +1,6 @@
 name: CrossRefCheck with Anchors
 
+on: 
   push:
     branches:
     - main
