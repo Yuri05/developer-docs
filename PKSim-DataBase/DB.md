@@ -334,6 +334,10 @@ Defines available **active** transport types (which is a subset of all transport
 
 ![](images/overview_species_and_populations.png)
 
+**tab_population_containers** specifies which containers are available for the given population and is described in detail [here](#tab_population_containers).
+See the [Containers](#containers) section for the explanation how this information is used when creating a simulation).
+
+
 ### tab_species
 Defines a species.
 
@@ -369,10 +373,6 @@ Define genders available for a population. If no gender-specific data is availab
 Defines the age range and the default age for the newly created individuals for all age-dependent populations.
 
 * **default_age_unit** is the default *user interface* unit used when creating individuals/populations for the given population.
-
-
-### tab_population_containers
-Specifies which containers are available for the given population (s. the [Containers](#containers) section for the explanation how this information is used when creating a simulation).
 
 
 ### tab_species_calculation_methods
@@ -889,9 +889,11 @@ PK-Sim then expects, that **exactly 2 referenced quantities are defined for the 
 ## Calculation methods and parameter value versions
 ![](images/overview_CM_and_PVV.png)
 
-*tab_species_calculation_methods* defines which calculation methods are available for the given species and is described in detail [here](#tab_species_calculation_methods).
+**tab_species_calculation_methods** defines which calculation methods are available for the given species and is described in detail [here](#tab_species_calculation_methods).
 
-*tab_species_parameter_value_versions* is the counterpart of *tab_species_calculation_methods* and defines which parameter value versions are available for the given species. It is described in detail [here](#tab_species_parameter_value_versions).
+**tab_species_parameter_value_versions** is the counterpart of *tab_species_calculation_methods* and defines which parameter value versions are available for the given species. It is described in detail [here](#tab_species_parameter_value_versions).
+
+**tab_categories** specifies the categories of calculation methods and parameter value versions and is described in detail [here](#tab_categories).
 
 
 ### tab_models
@@ -909,11 +911,6 @@ Defines a *calculation method* (**CM**). A calculation method describes how a **
 ### tab_parameter_value_versions
 Defines a *parameter value version* (**PVV**). A parameter value version describes how a **group of parameters** are defined by their constant values or their distributions. A decision about which parameters should be described by the same PVV is usually based on information about which parameters would change when the user switches from one PVV to another. More details on parameter value versions are provided in the sections [Species and populations](#species-and-populations) and [Container parameters](#container-parameters).
 
-
-### tab_categories
-Specifies the categories of calculation methods and parameter value versions.
-
-* **category_type** describes for which building block or simulation all calculation methods or parameter value versions of the given category are valid. For example, if the category type of a calculation method is "Individual" - the calculation method will be used when creating an individual. Valid values of the category type are defined by the [`enum CategoryType`](https://github.com/Open-Systems-Pharmacology/PK-Sim/blob/develop/src/PKSim.Core/Model/Category.cs).
 
 ### tab_model_calculation_methods
 Defines which calculation methods are available for a model.
