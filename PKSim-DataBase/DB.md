@@ -605,9 +605,9 @@ There is another way to describe the value of a container parameter: by an age-d
 
 The difference to the *[tab_container_parameter_curves](#tab_container_parameter_curves)* is: the age-dependent parameter value and distribution are not defined by the table of support points, but by 2 analytical functions:
 
-$Mean\ value = f_1(Age,\ ...)$
+$$Mean\ value = f_1(Age,\ ...)$$
 
-$Standard\ deviation = f_2(Age,\ ...)$
+$$Standard\ deviation = f_2(Age,\ ...)$$
 
 ![](images/overview_container_parameters_fcurves.png)
 
@@ -650,22 +650,22 @@ This section describes the formulas defined in the PK-Sim database. This include
 * table formulas with offset
 * table formulas with X argument
 
-An **explicit formula** is defined by the equation $f(P_1, ... P_n; M_1, ..., M_k; C_1, ... C_j; TIME)$ where:
+An **explicit formula** is defined by the equation $$f(P_1, ... P_n; M_1, ..., M_k; C_1, ... C_j; TIME)$$ where:
 
-* $f$ is an analytical function
-* $P_1, ... P_n$ ($n \geq 0$) are model parameters 
-* $M_1, ..., M_k$ ($k \geq 0$) are molecule amounts 
-* $C_1, ... C_j$ ($j \geq 0$) are molecule concentrations
-* $TIME$ is the current time (related to the begin of the simulation run)
+* $$f$$ is an analytical function
+* $$P_1, ... P_n$$ ($$n \geq 0$$) are model parameters 
+* $$M_1, ..., M_k$$ ($$k \geq 0$$) are molecule amounts 
+* $$C_1, ... C_j$$ ($$j \geq 0$$) are molecule concentrations
+* $$TIME$$ is the current time (related to the begin of the simulation run)
 
-A **sum formula** is defined by the equation $f(P_1, ... P_n; M_1, ..., M_k; C_1, ... C_j; TIME;$ `Q_#i` $)$ where:
+A **sum formula** is defined by the equation $$f(P_1, ... P_n; M_1, ..., M_k; C_1, ... C_j; TIME;$$ `Q_#i` $$)$$ where:
 
 * `Q_#i` is a *control variable* (parameter, molecule amount, etc.) defined by certain conditions
 * all other arguments have the same meaning as in an explicit formula
 
 A **table formula with offset** is defined by 2 quantities (see the [OSP documentation](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#working-with-table-formulas-with-offset) for details):
 
-* **table object** with the `Table_formula` (defined by the support points { $time_i;value_i$} )
+* **table object** with the `Table_formula` (defined by the support points { $$time_i;value_i$$} )
 * **offset object** with the `Offset_formula`.
 
 The X argument of the table object is always the (simulation) time, and the formula returns the value
@@ -673,11 +673,11 @@ The X argument of the table object is always the (simulation) time, and the form
 
 A **table formula with X argument** is a generalization of *table formula with offset* and is defined by 2 quantities
 
-* **table object** with the `Table_formula` (defined by the support points { $x_i;value_i$} ).
+* **table object** with the `Table_formula` (defined by the support points { $$x_i;value_i$$} ).
 * **X argument object** with the `XArgument_formula`.
 
 The table's X argument is arbitrary, and the formula returns the value
-$Table\_formula(XArgument\_formula(...))$.
+$$Table\_formula(XArgument\_formula(...))$$.
 
 S. the OSP Suite documentation: [Working with Formulas‌](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#working-with-formulas) and [Sum Formulas](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#sum-formulas) for more details on formulas.
 
@@ -719,7 +719,7 @@ Defines the formula equation for the combination {`calculation_method, formula_r
   
 * **formula** defines the equation for the combination {`calculation_method, formula_rate`}. Which operators, standard functions, etc. are allowed is described in the [OSP Suite documentation - Working with Formulas](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#working-with-formulas). 
   * It is allowed to leave the **formula** field empty. Quantity with empty formula becomes mandatory user input in PK-Sim UI. This means that only **visible and editable quantities** are allowed to have an empty formula.
-  * Formula can be set to $\pm \infty$. Valid values for this are:
+  * Formula can be set to $$\pm \infty$$. Valid values for this are:
     * `Inf` or `Infinity`
     * `-Inf` or `-Infinity`
 
@@ -917,11 +917,11 @@ Now, when it comes to creating a building block or simulation, the algorithm for
 1. Identify all PVVs with the category type corresponding to the type of the block/simulation.
 2. If the building block type is "Individual": remove all PVVs that are not assigned to the species of the individual (via *tab_species_parameter_value_versions*).
 3. Group all remaining PVVs according to their category. 
-   * For each group with $\geq$ 2 PVVs: these PVVs are **alternatives** and the user has to choose exactly one of them to be used in the building block/simulation.
+   * For each group with $$\geq$$ 2 PVVs: these PVVs are **alternatives** and the user has to choose exactly one of them to be used in the building block/simulation.
 4. Identify all CMs with the category type corresponding to the type of the block/simulation.
 5. If the building block type is "Individual": remove all CMs that are not assigned to the species of the individual (via *tab_species_calculation_methods*).
 6. Group all remaining CMs according to their category. 
-   * For each group with $\geq$ 2 CMs: these CMs are **alternatives** and the user has to choose exactly one of them to be used in the building block/simulation.
+   * For each group with $$\geq$$ 2 CMs: these CMs are **alternatives** and the user has to choose exactly one of them to be used in the building block/simulation.
 
 
 ## Applications and formulations
