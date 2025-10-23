@@ -895,17 +895,14 @@ PK-Sim then expects, that **exactly 2 referenced quantities are defined for the 
 
 **tab_categories** specifies the categories of calculation methods and parameter value versions and is described in detail [here](#tab_categories).
 
+**tab_calculation_methods** defines a *calculation method* (**CM**) and is described in detail [here](#tab_calculation_methods).
+A calculation method describes how a **group of quantities** (parameters, molecule initial values, etc.) are defined by their formulas. A decision about which quantities should be described by the same CM is usually based on information about which formulas would change when the user switches from one (sub)model to another. For example, if the user chooses a different method for calculating the *Body Surface Area* (BSA) - only the BSA parameter itself is affected, and thus only this parameter is described by the corresponding calculation method. If the user chooses another method for calculating the surface area between the plasma and the interstitial space - the *Surface Area (Plasma/Interstitial)* parameters in all tissues organs are affected: thus all these parameters are grouped in the same calculation method. More details on calculation methods are provided in the section [Formulas](#formulas).
+
 
 ### tab_models
 Defines available PBPK models, which can be selected during the simulation creation (e.g. "Small molecules model", "Large molecules model" etc.).
 
 * **short_display_name** is used in some places in the UI, where the fully qualified model display name is too long.
-
-
-### tab_calculation_methods
-Defines a *calculation method* (**CM**). A calculation method describes how a **group of quantities** (parameters, molecule initial values, etc.) are defined by their formulas. A decision about which quantities should be described by the same CM is usually based on information about which formulas would change when the user switches from one (sub)model to another. For example, if the user chooses a different method for calculating the *Body Surface Area* (BSA) - only the BSA parameter itself is affected, and thus only this parameter is described by the corresponding calculation method. If the user chooses another method for calculating the surface area between the plasma and the interstitial space - the *Surface Area (Plasma/Interstitial)* parameters in all tissues organs are affected: thus all these parameters are grouped in the same calculation method. More details on calculation methods are provided in the section [Formulas](#formulas).
-
-* **category** calculation methods belonging to the same category are alternatives, which can be selected by user.
 
 
 ### tab_parameter_value_versions
