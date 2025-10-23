@@ -1,11 +1,10 @@
 name: Check if all required files are UTF-8
 
+on: 
   push:
     branches:
     - main
   pull_request:
-    branches:
-    - main
 
 permissions:
   contents: read
