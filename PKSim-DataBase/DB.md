@@ -889,6 +889,10 @@ PK-Sim then expects, that **exactly 2 referenced quantities are defined for the 
 ## Calculation methods and parameter value versions
 ![](images/overview_CM_and_PVV.png)
 
+*tab_species_calculation_methods* defines which calculation methods are available for the given species and is described in detail [here](#tab_species_calculation_methods).
+
+*tab_species_parameter_value_versions* is the counterpart of *tab_species_calculation_methods* and defines which parameter value versions are available for the given species. It is described in detail [here](#tab_species_parameter_value_versions).
+
 
 ### tab_models
 Defines available PBPK models, which can be selected during the simulation creation (e.g. "Small molecules model", "Large molecules model" etc.).
@@ -910,15 +914,6 @@ Defines a *parameter value version* (**PVV**). A parameter value version describ
 Specifies the categories of calculation methods and parameter value versions.
 
 * **category_type** describes for which building block or simulation all calculation methods or parameter value versions of the given category are valid. For example, if the category type of a calculation method is "Individual" - the calculation method will be used when creating an individual. Valid values of the category type are defined by the [`enum CategoryType`](https://github.com/Open-Systems-Pharmacology/PK-Sim/blob/develop/src/PKSim.Core/Model/Category.cs).
-
-
-### tab_species_calculation_methods
-Defines which calculation methods are available for the given species.
-
-
-### tab_species_parameter_value_versions
-Is the counterpart of *tab_species_calculation_methods* and defines which parameter value versions are available for the given species.
-
 
 ### tab_model_calculation_methods
 Defines which calculation methods are available for a model.
